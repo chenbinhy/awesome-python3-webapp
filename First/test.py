@@ -15,3 +15,11 @@ class Dict(dict):
 
     def __setattr__(self, key, value):
         self[key] = value
+
+def create_args_string(num):
+    L = []
+    for n in range(num):
+        L.append('?')
+    return ', '.join(L)
+
+print(create_args_string(3))
